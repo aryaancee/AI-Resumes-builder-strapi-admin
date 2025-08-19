@@ -9,9 +9,9 @@ export interface EducationEducation extends Struct.ComponentSchema {
   attributes: {
     degree: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    endDate: Schema.Attribute.Date;
+    endDate: Schema.Attribute.String;
     major: Schema.Attribute.String;
-    startDate: Schema.Attribute.Date;
+    startDate: Schema.Attribute.String;
     universityName: Schema.Attribute.String;
   };
 }
@@ -25,11 +25,25 @@ export interface ExperienceExperience extends Struct.ComponentSchema {
   attributes: {
     city: Schema.Attribute.String;
     companyName: Schema.Attribute.String;
-    endDate: Schema.Attribute.Date;
-    startDate: Schema.Attribute.Date;
+    endDate: Schema.Attribute.String;
+    startDate: Schema.Attribute.String;
     state: Schema.Attribute.String;
     title: Schema.Attribute.String;
     workSummery: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ProjectsProjects extends Struct.ComponentSchema {
+  collectionName: 'components_projects_projects';
+  info: {
+    displayName: 'projects';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    githubLink: Schema.Attribute.String;
+    projectLink: Schema.Attribute.String;
+    projectTitle: Schema.Attribute.String;
+    skillsUsed: Schema.Attribute.String;
   };
 }
 
@@ -50,6 +64,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'education.education': EducationEducation;
       'experience.experience': ExperienceExperience;
+      'projects.projects': ProjectsProjects;
       'skills.skills': SkillsSkills;
     }
   }

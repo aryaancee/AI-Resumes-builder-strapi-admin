@@ -1,27 +1,23 @@
 {
-  "collectionName": "components_education_educations",
+  "collectionName": "components_projects_projects",
   "info": {
-    "displayName": "Education",
-    "icon": "stack"
+    "displayName": "projects"
   },
   "options": {},
   "attributes": {
-    "universityName": {
+    "projectTitle": {
       "type": "string"
     },
-    "degree": {
-      "type": "string"
-    },
-    "major": {
+    "skillsUsed": {
       "type": "string"
     },
     "description": {
       "type": "text"
     },
-    "startDate": {
+    "projectLink": {
       "type": "string"
     },
-    "endDate": {
+    "githubLink": {
       "type": "string"
     }
   },
